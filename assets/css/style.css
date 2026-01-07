@@ -86,3 +86,32 @@ button.btn.start-learning {
     color: #FFFFFF;
     margin-left: 10px;
 }
+
+h2 {
+    margin: 3rem 0 2rem;
+    text-align: center;
+    font-size: 40px;
+}
+.col-sm-2 {
+    padding: 0 3px;
+}
+.card-body {
+    padding: 0;
+}
+.card-title {
+    text-align: center;
+}
+.popular-categories-bg {
+    padding-top: 150px;
+}
+.notes {
+    background: url('../images/Notes.svg') center / cover no-repeat;
+}
+.tutorials {
+    background: url('../images/Tutorials.svg') center / cover no-repeat;
+}
+.card-title h6 {
+    margin: 0;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+}
