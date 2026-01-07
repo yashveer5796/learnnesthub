@@ -8,7 +8,7 @@
     font-family: 'Poppins', sans-serif;
 }
 .navbar {
-    background: #fff;
+    background: #1F3A5F;
     border-bottom: 1px solid #eaeaea;
     position: sticky;
     top: 0;
@@ -25,7 +25,7 @@
 .logo a {
     font-size: 24px;
     font-weight: 600;
-    color: #1e40af;
+    color: #FFFFFF;
     text-decoration: none;
 }
 .nav-links {
@@ -37,7 +37,7 @@
 }
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #FFFFFF;
     font-size: 15px;
     transition: color 0.3s ease;
 }
@@ -49,4 +49,40 @@
     color: #fff;
     padding: 6px 14px;
     border-radius: 5px;
+}
+
+/* Hero Section Code starts here */
+.hero-section {
+    background: #2F80ED;
+}
+.hero-section h1 {
+    font-size: 48px;
+    color: #FFFFFF;
+    margin-top: 3rem;
+}
+.hero-section small.label {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: 1rem 0;
+    display: block;
+}
+.form-outline {
+    margin: 1rem 0;
+    position: relative;
+}
+.form-outline i.bi.bi-search {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+button.btn {
+    padding: 6px 24px;
+    font-weight: 500;
+}
+button.btn.start-learning {
+    background: #F2C94C;
+    color: #FFFFFF;
+    margin-left: 10px;
 }
