@@ -92,7 +92,7 @@ h2 {
     text-align: center;
     font-size: 40px;
 }
-.col-sm-2 {
+.col-sm-2, .col-sm-3 {
     padding: 0 3px;
 }
 .card-body {
@@ -114,4 +114,28 @@ h2 {
     margin: 0;
     border-top: 1px solid #ccc;
     padding: 10px 0;
+}
+
+.trending-article-bg {
+    padding-top: 170px;
+    border-radius: 6px;
+}
+.article_1 {
+    background: url('../images/cloud-computing.png') center / cover no-repeat;
+}
+.article_2 {
+    background: url('../images/medical.jpg') center / cover no-repeat;
+}
+.article_3 {
+    background: url('../images/exam-syllabus.jpg') center / cover no-repeat;
+}
+.article_4 {
+    background: url('../images/career-option.jpg') center / cover no-repeat;
+}
+.trending-articles .card-title h6 {
+    font-size: 20px;
+    padding: 15px;
+}
+.card-title a {
+    text-decoration: none;
 }
