@@ -1,295 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>LearnNestHub - Smart Learning Made Simple</title>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <title>LearnNestHub – Simple Learning for Students & Beginners</title>
+  <meta name="description" content="LearnNestHub provides simple explanations, exam-oriented notes, and beginner-friendly learning for students and competitive exam.">
+  <meta name="keywords" content="online learning, exam-preparation, student notes, beginner learning, education platform">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="/">LearnNestHub</a>
-            </div>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Notes</a></li>
-                <li><a href="/">Tutorials</a></li>
-                <li><a href="/">Exams</a></li>
-                <li><a href="/">Career</a></li>
-                <li><a href="/">Blog</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="container">
-            <div class="row">
-                <div class="text-center">
-                    <h1>Learn Smarter with LearnNestHub</h1>
-                    <small class="label">Simple Notes, Clear Concepts & Exam-Focused Learning</small>
-                    <!-- <p>LearnNest helps students understand concepts easily with well-structured notes, tutorials, and exam-oriented content - all in simple language.</p> -->
-                    <div class="button-group">
-                        <button type="button" class="btn btn-primary">Explore Notes</button>
-                        <button type="button" class="btn start-learning">Start Learning</button>
-                    </div>
-                </div>
-                <div class="form-outline">
-                    <input type="text" class="form-control ps-5" placeholder="Search notes, tutorials, exams, concepts..." />
-                    <i class="bi bi-search"></i>
-                  </div>
-            </div>
-        </div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#">LearnNestHub</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Classes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Exams</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-warning px-4" href="#">Start Learning</a>
+        </li>
+      </ul>
     </div>
-    
+  </div>
+</nav>
 
-    <!-- Popular Categories -->
-    <div class="popular-categories">
-        <div class="container">
-            <h2>Explore Learning Categories</h2>
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="popular-categories-bg notes"></div>
-                                <h6>School Notes</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="popular-categories-bg tutorials"></div>
-                                <h6>Tutorials</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="popular-categories-bg notes"></div>
-                                <h6>Exams Preparation</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="popular-categories-bg notes"></div>
-                                <h6>Career Guidance</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="popular-categories-bg notes"></div>
-                                <h6>Practice Questions</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="popular-categories-bg notes"></div>
-                                <h6>Study Materials</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- ================= HERO ================= -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="hero-title">Learn Smarter.<br>Build Your Future.</h1>
+        <p class="hero-text">
+          Simple explanations, exam-focused notes and structured learning
+          for students and beginners.
+        </p>
+
+        <div class="mt-4">
+          <a href="#" class="btn btn-warning btn-lg me-3">Start Learning Free</a>
+          <a href="#" class="btn btn-outline-primary btn-lg">Explore Courses</a>
         </div>
+      </div>
+
+      <div class="col-lg-6 text-center mt-4 mt-lg-0">
+        <img src="images/hero-illustration.svg" class="img-fluid" alt="Learning">
+      </div>
     </div>
-    
+  </div>
+</section>
 
-    <!-- Featured / Trending Articles -->
-    <div class="container">
-        <div class="trending-articles">
-            <h2>Most Read on LearnNestHub</h2>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="trending-article-bg article_1"></div>
-                                <a href="#"><h6>What is Cloud Computing?</h6></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="trending-article-bg article_2"></div>
-                                <a href="#"><h6>Difference Between PCOS and PCOD</h6></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="trending-article-bg article_3"></div>
-                                <a href="#"><h6>SSC Exam Syllabus explained</h6></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <div class="trending-article-bg article_4"></div>
-                                <a href="#"><h6>Career Options After 12<sup>th</sup></h6></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- ================= TRUST BAR ================= -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-3">✔ Simple Language</div>
+      <div class="col-md-3">✔ Exam Oriented</div>
+      <div class="col-md-3">✔ Free & Premium</div>
+      <div class="col-md-3">✔ Regular Updates</div>
     </div>
+  </div>
+</section>
 
-    <!-- Class and Exam - Wise Block -->
-    <div class="container">
-        <div class="exam-wise-block">
-            <h2>Learn by Class or Exam</h2>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <a href="#"><h6>School Education</h6></a>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li><a href="#" class="list-group-item">Class 6 to 10 Notes</a></li>
-                                <li><a href="#" class="list-group-item">Class 11 to 12 Notes</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <a href="#"><h6>Competitive Exam</h6></a>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li><a href="#" class="list-group-item">SSC, Railway, Banking</a></li>
-                                <!-- <li><a href="#" class="list-group-item">Class 11 to 12 Notes</a></li> -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <a href="#"><h6>Skill Development</h6></a>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li><a href="#" class="list-group-item">Programming Basics</a></li>
-                                <li><a href="#" class="list-group-item">Computer Fundamentals</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- ================= CATEGORIES ================= -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title text-center">Learning Categories</h2>
+
+    <div class="row g-4 mt-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="category-card">
+          <h5>School Learning</h5>
+          <p>Class 6–12 Notes</p>
+          <a href="#">Explore →</a>
         </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="category-card">
+          <h5>Competitive Exams</h5>
+          <p>SSC, Railway, Banking</p>
+          <a href="#">Explore →</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="category-card">
+          <h5>Skill Development</h5>
+          <p>Computer & IT Basics</p>
+          <a href="#">Explore →</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="category-card">
+          <h5>Career Guidance</h5>
+          <p>After 10th & 12th</p>
+          <a href="#">Explore →</a>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <!-- Trust Section -->
-    <div class="container">
-        <div class="why-learnNest">
-            <h2>Why Students Choose LearnNestHub</h2>
-            <div class="row">
-                <ul>
-                    <li><i class="bi bi-check2"></i>Simple Explanation</li>
-                    <li><i class="bi bi-check2"></i>Exam - focused Content</li>
-                    <li><i class="bi bi-check2"></i>Free & updated notes</li>
-                    <li><i class="bi bi-check2"></i>Trusted by students</li>
-                </ul>
-            </div>
-        </div>
+<!-- ================= FEATURED ================= -->
+<section class="section bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">Featured Lesson</h2>
+
+    <div class="featured-card mx-auto mt-4">
+      <h4>What is Cloud Computing?</h4>
+      <p>Understand cloud computing in simple language with real-life examples.</p>
+      <a href="#" class="btn btn-primary">Read Lesson</a>
     </div>
+  </div>
+</section>
 
-    <!-- Latest Article -->
-    <div class="container">
-        <div class="latest-from-learnNest">
-            <h2>Latest from LearnNestHub</h2>
-            <div class="row">
-                <ul>
-                    <li><i class="bi bi-arrow-right"></i>Article Title 1</li>
-                    <li><i class="bi bi-arrow-right"></i>Article Title 2</li>
-                    <li><i class="bi bi-arrow-right"></i>Article Title 3</li>
-                    <li><i class="bi bi-arrow-right"></i>Article Title 4</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<!-- ================= CTA ================= -->
+<section class="cta-section">
+  <div class="container text-center">
+    <h2>Start your learning journey today</h2>
+    <p>Free learning resources designed for everyone.</p>
+    <a href="#" class="btn btn-warning btn-lg">Join Free</a>
+  </div>
+</section>
 
-    <!-- CTA / Community Join -->
-    <!-- <div class="container">
-        <div class="Community-join">
-            <h4>Get Free Notes & Study Updates</h4>
-            <h6>Join our Telegram / Subscribe Now</h6>
-            <div class="row">
-                <div class="button-group">
-                    <button type="button" class="btn btn-primary">Join Telegram</button>
-                    <button type="button" class="btn btn-primary">Subscribe</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container text-center">
+    <p class="mb-1 fw-bold">LearnNestHub</p>
+    <p class="small">© 2026 LearnNestHub. All rights reserved.</p>
+  </div>
+</footer>
 
-
-    <!-- Mini About -->
-    <!-- <div class="container">
-        <div class="mini-about">
-            <h4>About LearnNestHub</h4>
-            <h6>LearnNestHub provides simple, reliable, </br> exam - focused learning resources for students.</h6>
-        </div>
-    </div> -->
-
-    <!-- Footer -->
-    <div class="footer-wrapper">
-        <div class="footer-inner-wrapper">
-            <a class="float-left" href="/contact" aria-label="Contact">About</a>
-            <a class="float-left" href="/contact" aria-label="Contact">Contact</a>
-            <a class="float-left" href="/privacy" aria-label="Privacy">Privacy</a>
-            <a class="float-left" href="/support" aria-label="Help">Disclaimer</a>
-            <a class="float-left" href="/tos" aria-label="Terms">Terms</a>
-            <a class="float-left" href="/support" aria-label="Help">Notes</a>
-            <a class="float-left" href="/support" aria-label="Help">Tutorials</a>
-            <a class="float-left" href="/support" aria-label="Help">Exams</a>
-            <a class="float-left" href="/support" aria-label="Help">Career</a>
-            <a class="float-left" href="/support" aria-label="Help">Blog</a>
-        </div>
-    </div>
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
