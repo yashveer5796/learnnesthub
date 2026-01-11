@@ -6,6 +6,9 @@ body {
   .navbar .btn {
     font-size: 14px;
   }
+.nav-link.active {
+    color: #0D6EFD;
+}
 
   /* Hero */
   .hero-section {
@@ -142,4 +145,5 @@ body {
     }
 
   }
+
 
