@@ -85,7 +85,11 @@
                 <div class="card-body text-center">
                     <h2 class="card-title">Lesson 1</h2>
                     <p class="card-text">Introduction to Computers – basics, types, and examples.</p>
-                    <a href="lesson1.html" class="btn btn-primary">Start Lesson</a>
+                    <p class="mb-1">Progress: <span id="progress-class6-lesson1">0%</span></p>
+                    <div class="progress mb-3" style="height:8px;">
+                        <div class="progress-bar" id="bar-class6-lesson1" style="width:0%"></div>
+                    </div>
+                    <a href="lesson1.html" data-lesson="class6-lesson1" class="btn btn-primary btn-sm">Continue</a>
                 </div>
             </div>
         </div>
@@ -183,8 +187,39 @@
         <a href="/contact.html" class="text-white">Contact Us</a>
     </div>
 </footer>
-  
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const lessons = [
+  "class6-lesson1",
+  "class6-lesson2",
+  "class6-lesson3",
+  "class6-lesson4",
+  "class6-lesson5"
+];
+
+lessons.forEach(lessonId => {
+  const progress = localStorage.getItem(lessonId) || 0;
+
+  const textEl = document.getElementById("progress-" + lessonId);
+  const barEl = document.getElementById("bar-" + lessonId);
+  const btnEl = document.querySelector(`[data-lesson="${lessonId}"]`);
+
+  if (textEl && barEl) {
+    textEl.innerText = progress + "%";
+    barEl.style.width = progress + "%";
+
+    if (progress >= 90) {
+      barEl.classList.add("bg-success");
+      if (btnEl) {
+        btnEl.innerText = "Completed ✔";
+        btnEl.classList.remove("btn-primary");
+        btnEl.classList.add("btn-success");
+      }
+    }
+  }
+});
+</script>
 </body>
 </html>
 
