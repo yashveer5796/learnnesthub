@@ -224,12 +224,37 @@
 
 <!-- Progress Bar JS -->
 <script>
-window.addEventListener("scroll", () => {
-    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
+const lessonId = "class6-lesson1";
+const progressBar = document.getElementById("readingProgress");
 
-    document.getElementById("readingProgress").style.width = scrolled + "%";
+/* -------- Restore Progress on Load -------- */
+window.addEventListener("load", () => {
+    const savedProgress = localStorage.getItem(lessonId);
+
+    if (savedProgress) {
+        const height =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+
+        const scrollTo = (savedProgress / 100) * height;
+        window.scrollTo(0, scrollTo);
+        progressBar.style.width = savedProgress + "%";
+    }
+});
+
+/* -------- Save Progress on Scroll -------- */
+window.addEventListener("scroll", () => {
+    const winScroll =
+        document.documentElement.scrollTop || document.body.scrollTop;
+
+    const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+    const scrolled = Math.min((winScroll / height) * 100, 100);
+
+    progressBar.style.width = scrolled + "%";
+    localStorage.setItem(lessonId, Math.round(scrolled));
 });
 </script>
 
