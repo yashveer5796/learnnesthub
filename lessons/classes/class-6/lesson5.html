@@ -16,17 +16,18 @@
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
-.progress-placeholder {
-    height: 20px;
-    background-color: #e9ecef;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    overflow: hidden;
+.progress-container {
+    position: sticky;
+    top: 52px; /* height of navbar */
+    z-index: 1020;
+    background: #fff;
+    padding: 5px 0;
 }
-.progress-placeholder-inner {
-    width: 0;
-    height: 100%;
-    background-color: #007bff;
+.progress {
+    height: 8px;
+}
+.progress-bar {
+    transition: width 0.2s ease;
 }
 .mcq-card {
     margin-top: 20px;
@@ -55,6 +56,14 @@
   </div>
 </nav>
 
+<!-- ================= PROGRESS BAR (STICKY) ================= -->
+<div class="progress-container">
+    <div class="progress mb-3" style="height:8px;">
+        <div id="lessonProgressBar" class="progress-bar" role="progressbar" style="width:0%"></div>
+    </div>    
+    <p id="lessonProgressText" class="small text-muted">0% completed</p>
+</div>
+    
 <div class="container py-5">
 
     <!-- Breadcrumb -->
@@ -69,11 +78,6 @@
 
     <!-- Lesson Content -->
     <h1 class="mb-4">Lesson 5: Introduction to Productivity Software – Word, Excel, and PowerPoint</h1>
-
-    <!-- Progress Bar Placeholder -->
-    <div class="progress-placeholder">
-        <div class="progress-placeholder-inner" id="progressBar"></div>
-    </div>
 
     <div class="mb-5">
 
