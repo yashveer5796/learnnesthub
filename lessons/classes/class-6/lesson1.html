@@ -224,7 +224,7 @@
   const unlocked = localStorage.getItem(lessonId + "_unlocked") === "true" || lessonId === "class6-lesson1";
   if (!unlocked) {
     alert("This lesson is locked. Complete the previous lesson first.");
-    window.location.href = "../index.html"; // lesson listing page
+    window.location.href = "./index.html"; // lesson listing page
   }
 
   // 🔹 Scroll progress logic
