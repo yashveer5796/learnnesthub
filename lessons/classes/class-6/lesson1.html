@@ -216,25 +216,31 @@
 
 <!-- Progress Bar JS -->
 <script>
-  const lessonId = "class6-lesson1"; 
+  const lessonId = "class6-lesson1"; // 🔴 change per lesson
+  let maxProgress = parseInt(localStorage.getItem(lessonId)) || 0;
 
   function updateProgress() {
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
 
-    let progress = Math.round((scrollTop / docHeight) * 100);
-    progress = Math.min(progress, 100);
+    if (docHeight <= 0) return;
 
-    // Save progress
-    localStorage.setItem(lessonId, progress);
+    let currentProgress = Math.round((scrollTop / docHeight) * 100);
+    currentProgress = Math.min(currentProgress, 100);
 
-    // Update progress bar
+    // 🔒 Lock progress (never decrease)
+    if (currentProgress > maxProgress) {
+      maxProgress = currentProgress;
+      localStorage.setItem(lessonId, maxProgress);
+    }
+
+    // Update UI
     const bar = document.getElementById("lessonProgressBar");
     const text = document.getElementById("lessonProgressText");
 
     if (bar && text) {
-      bar.style.width = progress + "%";
-      text.innerText = progress + "% completed";
+      bar.style.width = maxProgress + "%";
+      text.innerText = maxProgress + "% completed";
     }
   }
 
