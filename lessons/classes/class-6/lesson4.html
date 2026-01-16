@@ -3,21 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lesson 3: Basic Computer Components | LearnNestHub</title>
-<meta name="description" content="Lesson 3 of Class 6 on LearnNestHub. Learn about computer hardware and software, and their functions. Includes MCQs to test your understanding.">
-<meta name="keywords" content="Class 6, Lesson 3, Computers, Hardware, Software, Online Learning, LearnNestHub, MCQs">
+<title>Lesson 4: Operating Systems and File Management | LearnNestHub</title>
+<meta name="description" content="Lesson 4 of Class 6 on LearnNestHub. Learn about operating systems, their functions, and file management. Includes MCQs to test your understanding.">
+<meta name="keywords" content="Class 6, Lesson 4, Computers, Operating System, File Management, LearnNestHub, MCQs">
 <meta name="robots" content="index, follow">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap">
 <link rel="stylesheet" href="../../../assets/css/style.css">
+
 <style>
-.card-hover:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.2);}
-.progress-placeholder { height:20px; background:#e9ecef; border-radius:5px; margin-bottom:20px; overflow:hidden;}
-.progress-placeholder-inner { width:0; height:100%; background:#007bff;}
-.mcq-card {margin-top:20px;}
+.card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.progress-placeholder {
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.progress-placeholder-inner {
+    width: 0;
+    height: 100%;
+    background-color: #007bff;
+}
+.mcq-card {
+    margin-top: 20px;
+}
 </style>
 </head>
 <body>
+
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold text-primary" href="/">LearnNestHub</a>
@@ -38,89 +56,151 @@
 </nav>
 
 <div class="container py-5">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-    <li class="breadcrumb-item"><a href="/classes.html">Classes</a></li>
-    <li class="breadcrumb-item"><a href="class6.html">Class 6</a></li>
-    <li class="breadcrumb-item"><a href="lesson-list.html">Lessons</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Lesson 3</li>
-  </ol>
-</nav>
 
-<h1 class="mb-4">Lesson 3: Basic Computer Components</h1>
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="/classes.html">Classes</a></li>
+        <li class="breadcrumb-item"><a href="class6.html">Class 6</a></li>
+        <li class="breadcrumb-item"><a href="lesson-list.html">Lessons</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Lesson 4</li>
+      </ol>
+    </nav>
 
-<div class="progress-placeholder">
-  <div class="progress-placeholder-inner" id="progressBar"></div>
-</div>
+    <!-- Lesson Content -->
+    <h1 class="mb-4">Lesson 4: Understanding Operating Systems and File Management</h1>
 
-<div class="mb-5">
-  <p>In this lesson, we will learn about the main components of a computer and how hardware and software work together.</p>
-
-  <h4>Hardware</h4>
-  <ul>
-    <li>CPU (Central Processing Unit): Brain of the computer</li>
-    <li>RAM (Memory): Temporary storage for running programs</li>
-    <li>Storage Devices: HDD, SSD</li>
-    <li>Input Devices: Keyboard, Mouse</li>
-    <li>Output Devices: Monitor, Printer</li>
-  </ul>
-
-  <h4>Software</h4>
-  <ul>
-    <li>System Software: Operating system, drivers</li>
-    <li>Application Software: Word processors, games, browsers</li>
-  </ul>
-</div>
-
-<h3>Test Your Knowledge</h3>
-<div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card mcq-card card-hover h-100">
-      <div class="card-body">
-        <h5 class="card-title">Question 1</h5>
-        <p class="card-text">Which of the following is hardware?</p>
-        <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1a"><label class="form-check-label" for="q1a">Keyboard</label></div>
-        <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1b"><label class="form-check-label" for="q1b">Windows OS</label></div>
-        <div class="form-check"><input class="form-check-input" type="radio" name="q1" id="q1c"><label class="form-check-label" for="q1c">Microsoft Word</label></div>
-      </div>
+    <!-- Progress Bar Placeholder -->
+    <div class="progress-placeholder">
+        <div class="progress-placeholder-inner" id="progressBar"></div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card mcq-card card-hover h-100">
-      <div class="card-body">
-        <h5 class="card-title">Question 2</h5>
-        <p class="card-text">CPU stands for?</p>
-        <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2a"><label class="form-check-label" for="q2a">Central Processing Unit</label></div>
-        <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2b"><label class="form-check-label" for="q2b">Central Power Unit</label></div>
-        <div class="form-check"><input class="form-check-input" type="radio" name="q2" id="q2c"><label class="form-check-label" for="q2c">Computer Peripheral Unit</label></div>
-      </div>
+
+    <div class="mb-5">
+
+        <!-- Introduction -->
+        <h2>Introduction</h2>
+        <p>Every computer needs a system to manage its hardware and software. This system is called an <strong>Operating System (OS)</strong>. Along with the OS, proper file management helps us store and organize data efficiently.</p>
+        <hr>
+
+        <!-- Operating System -->
+        <h2>1. Operating System (OS)</h2>
+        <p>An <strong>Operating System</strong> is software that manages all the hardware and software resources of a computer.</p>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Windows</li>
+            <li>Linux</li>
+            <li>macOS</li>
+            <li>Android</li>
+        </ul>
+        <p><strong>Functions:</strong></p>
+        <ul>
+            <li>Manages computer hardware</li>
+            <li>Provides a user interface to interact with the computer</li>
+            <li>Runs and manages applications</li>
+            <li>Handles input and output operations</li>
+        </ul>
+        <hr>
+
+        <!-- File Management -->
+        <h2>2. File Management</h2>
+        <p><strong>File Management</strong> is the process of storing, organizing, and accessing data on a computer.</p>
+        <p><strong>Examples:</strong></p>
+        <ul>
+            <li>Creating folders and subfolders to store documents</li>
+            <li>Renaming, copying, or deleting files</li>
+            <li>Saving pictures, videos, and music in proper folders</li>
+        </ul>
+        <p><strong>Uses:</strong></p>
+        <ul>
+            <li>Keeps data organized and easy to find</li>
+            <li>Prevents loss of important files</li>
+            <li>Helps maintain efficient storage</li>
+        </ul>
+        <hr>
+
+        <!-- Summary -->
+        <h2>Summary</h2>
+        <ul>
+            <li>Operating System manages hardware and software resources</li>
+            <li>OS provides a user interface and runs applications</li>
+            <li>File Management helps organize and access data efficiently</li>
+            <li>Proper folder structure prevents data loss</li>
+        </ul>
+        <hr>
+
+        <!-- MCQs -->
+        <h2>MCQs (Practice Questions)</h2>
+        <ol>
+            <li>Which software manages all hardware and software resources?
+                <ul>
+                    <li>A. Application Software</li>
+                    <li>B. Operating System</li>
+                    <li>C. Web Browser</li>
+                    <li>D. Database</li>
+                    <strong>Answer: B</strong>
+                </ul>
+            </li>
+            <li>Which of the following is an example of an operating system?
+                <ul>
+                    <li>A. Microsoft Word</li>
+                    <li>B. Windows</li>
+                    <li>C. Google Chrome</li>
+                    <li>D. VLC Media Player</li>
+                    <strong>Answer: B</strong>
+                </ul>
+            </li>
+            <li>Which process helps organize files and folders on a computer?
+                <ul>
+                    <li>A. Hardware management</li>
+                    <li>B. File Management</li>
+                    <li>C. Input processing</li>
+                    <li>D. Internet browsing</li>
+                    <strong>Answer: B</strong>
+                </ul>
+            </li>
+            <li>Which is NOT a function of an Operating System?
+                <ul>
+                    <li>A. Managing hardware</li>
+                    <li>B. Running applications</li>
+                    <li>C. Cooking food</li>
+                    <li>D. Handling input/output</li>
+                    <strong>Answer: C</strong>
+                </ul>
+            </li>
+        </ol>
+
+        <p>➡️ <strong>Next Lesson:</strong> Introduction to Productivity Software – Word, Excel, PowerPoint</p>
     </div>
-  </div>
-  <div class="col">
-    <div class="card mcq-card card-hover h-100">
-      <div class="card-body">
-        <h5 class="card-title">Question 3</h5>
-        <p class="card-text">Which is an example of application software?</p>
-        <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3a"><label class="form-check-label" for="q3a">Microsoft Word</label></div>
-        <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3b"><label class="form-check-label" for="q3b">CPU</label></div>
-        <div class="form-check"><input class="form-check-input" type="radio" name="q3" id="q3c"><label class="form-check-label" for="q3c">RAM</label></div>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 
 <footer class="py-4 bg-dark text-white text-center">
-  <div class="container">
-    <p class="mb-2">© 2026 LearnNestHub</p>
-    <a href="/about.html" class="text-white me-3">About Us</a>
-    <a href="/privacy-policy.html" class="text-white me-3">Privacy Policy</a>
-    <a href="/terms.html" class="text-white me-3">Terms & Conditions</a>
-    <a href="/contact.html" class="text-white">Contact Us</a>
-  </div>
+    <div class="container">
+        <p class="mb-2">© 2026 LearnNestHub</p>
+        <a href="/about.html" class="text-white me-3">About Us</a>
+        <a href="/privacy-policy.html" class="text-white me-3">Privacy Policy</a>
+        <a href="/terms.html" class="text-white me-3">Terms & Conditions</a>
+        <a href="/contact.html" class="text-white">Contact Us</a>
+    </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Progress Bar JS -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const progressBar = document.getElementById("progressBar");
+    const content = document.querySelector(".container.py-5");
+
+    window.addEventListener("scroll", function() {
+        const totalHeight = content.scrollHeight - window.innerHeight;
+        const scrollPosition = window.scrollY - content.offsetTop + 100;
+        let progressPercent = (scrollPosition / totalHeight) * 100;
+        progressPercent = Math.min(Math.max(progressPercent, 0), 100);
+        progressBar.style.width = progressPercent + "%";
+    });
+});
+</script>
+
 </body>
 </html>
