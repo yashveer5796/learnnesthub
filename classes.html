@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classes 6-12 Notes | LearnNestHub</title>
-  <meta name="description" content="Free and easy notes for Class 6 to 12 students with simple explanations and exam-oriented learning.">
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classes 6 to 12 | LearnNestHub</title>
+<meta name="description" content="Explore LearnNestHub Classes for 6th to 12th. Start with Class 6 Computer Fundamentals. Other classes coming soon. Learn step-by-step with easy lessons and quizzes.">
+<meta name="keywords" content="Class 6, Class 7, Class 8, Computer Lessons, Online Learning, Free Courses, LearnNestHub">
+<meta name="robots" content="index, follow">
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="./assets/css/style.css">
+<style>
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.card-ready::after {
+    content: "Ready";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #28a745;
+    padding: 3px 7px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: #fff;
+}
+.card-bg-1 {background-color: #3498db; color: #fff;}
+.card-bg-2 {background-color: #9b59b6; color: #fff;}
+.card-bg-3 {background-color: #e67e22; color: #fff;}
+.card-bg-4 {background-color: #1abc9c; color: #fff;}
+.card-bg-5 {background-color: #f39c12; color: #fff;}
+.card-bg-6 {background-color: #e74c3c; color: #fff;}
+.card-bg-7 {background-color: #2ecc71; color: #fff;}
+</style>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 <!-- ================= NAVBAR ================= -->
@@ -39,130 +64,91 @@
   </div>
 </nav>
 
-<section class="bg-light py-5">
-  <div class="container text-center">
-    <h1 class="fw-bold">School Learning (Class 6–12)</h1>
-    <p class="text-muted mt-2">
-      Easy notes, clear concepts, and exam-oriented learning in simple language.
-    </p>
-  </div>
-</section>
+<div class="container py-5">
+    <h1 class="text-center mb-3">Choose Your Class</h1>
+    <p class="text-center text-muted mb-5">Explore LearnNestHub Classes for 6th to 12th. Start with Class 6 and gradually build your learning journey. Other classes coming soon!</p>
 
-<section class="py-5">
-  <div class="container">
     <div class="row g-4">
-
-      <!-- Class 6 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="fw-bold">Class 6</h5>
-            <ul class="text-muted small">
-              <li>Mathematics</li>
-              <li>Science</li>
-              <li>Social Science</li>
-              <li>English</li>
-            </ul>
-            <a href="start-learning.html" class="btn btn-sm btn-primary">
-              Start Learning
-            </a>
-          </div>
+        <!-- Class 6 -->
+        <div class="col-md-4">
+            <div class="card card-hover card-ready card-bg-1 position-relative h-100">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Class 6</h2>
+                    <p class="card-text">Learn computer fundamentals and digital basics along with fun exercises.</p>
+                    <a href="start-learning.html" class="btn btn-primary">Start Learning</a>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Class 7 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="fw-bold">Class 7</h5>
-            <ul class="text-muted small">
-              <li>Mathematics</li>
-              <li>Science</li>
-              <li>Social Science</li>
-              <li>English</li>
-            </ul>
-            <a href="start-learning.html" class="btn btn-sm btn-primary">
-              Start Learning
-            </a>
-          </div>
+        <!-- Class 7 -->
+        <div class="col-md-4">
+            <div class="card card-hover card-bg-2 h-100 text-center">
+                <div class="card-body">
+                    <h2 class="card-title">Class 7</h2>
+                    <p class="card-text">Strengthen computer knowledge with practical understanding.</p>
+                    <button class="btn btn-secondary" disabled>Coming Soon</button>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Class 8 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="fw-bold">Class 8</h5>
-            <ul class="text-muted small">
-              <li>Mathematics</li>
-              <li>Science</li>
-              <li>Social Science</li>
-              <li>English</li>
-            </ul>
-            <a href="start-learning.html" class="btn btn-sm btn-primary">
-              Start Learning
-            </a>
-          </div>
+        <!-- Class 8 -->
+        <div class="col-md-4">
+            <div class="card card-hover card-bg-3 h-100 text-center">
+                <div class="card-body">
+                    <h2 class="card-title">Class 8</h2>
+                    <p class="card-text">Explore operating systems, files, and basic applications.</p>
+                    <button class="btn btn-secondary" disabled>Coming Soon</button>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Class 9 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="fw-bold">Class 9</h5>
-            <ul class="text-muted small">
-              <li>Mathematics</li>
-              <li>Science</li>
-              <li>Social Science</li>
-              <li>English</li>
-            </ul>
-            <a href="start-learning.html" class="btn btn-sm btn-primary">
-              Start Learning
-            </a>
-          </div>
+        <!-- Class 9 -->
+        <div class="col-md-4">
+            <div class="card card-hover card-bg-4 h-100 text-center">
+                <div class="card-body">
+                    <h2 class="card-title">Class 9</h2>
+                    <p class="card-text">Understand fundamentals and improve productivity skills.</p>
+                    <button class="btn btn-secondary" disabled>Coming Soon</button>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Class 10 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm border-primary">
-          <div class="card-body">
-            <h5 class="fw-bold">Class 10</h5>
-            <ul class="text-muted small">
-              <li>Mathematics</li>
-              <li>Science</li>
-              <li>Social Science</li>
-              <li>English</li>
-            </ul>
-            <a href="start-learning.html" class="btn btn-sm btn-primary">
-              Start Learning
-            </a>
-          </div>
+        <!-- Class 10 -->
+        <div class="col-md-4">
+            <div class="card card-hover card-bg-5 h-100 text-center">
+                <div class="card-body">
+                    <h2 class="card-title">Class 10</h2>
+                    <p class="card-text">Build essential digital skills for academics and life.</p>
+                    <button class="btn btn-secondary" disabled>Coming Soon</button>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <!-- Class 11–12 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="fw-bold">Class 11–12</h5>
-            <ul class="text-muted small">
-              <li>Physics</li>
-              <li>Chemistry</li>
-              <li>Mathematics / Biology</li>
-              <li>Commerce / Arts</li>
-            </ul>
-            <a href="start-learning.html" class="btn btn-sm btn-primary">
-              Start Learning
-            </a>
-          </div>
+        <!-- Class 11 -->
+        <div class="col-md-4">
+            <div class="card card-hover card-bg-6 h-100 text-center">
+                <div class="card-body">
+                    <h2 class="card-title">Class 11</h2>
+                    <p class="card-text">Learn advanced concepts and real-world digital applications.</p>
+                    <button class="btn btn-secondary" disabled>Coming Soon</button>
+                </div>
+            </div>
         </div>
-      </div>
 
+        <!-- Class 12 -->
+        <div class="col-md-4">
+            <div class="card card-hover card-bg-7 h-100 text-center">
+                <div class="card-body">
+                    <h2 class="card-title">Class 12</h2>
+                    <p class="card-text">Prepare for higher studies with strong digital foundations.</p>
+                    <button class="btn btn-secondary" disabled>Coming Soon</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
+
+    <p class="text-center text-muted mt-5">LearnNestHub will provide all major subjects for Classes 6 to 12. Currently, Class 6 is live; other classes are coming soon.</p>
+</div>
 
 <!-- ================= FOOTER ================= -->
 <footer class="py-4 bg-dark text-white text-center">
@@ -179,3 +165,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
