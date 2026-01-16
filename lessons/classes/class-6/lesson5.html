@@ -195,23 +195,41 @@
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 <!-- Progress Bar JS -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const progressBar = document.getElementById("progressBar");
-    const content = document.querySelector(".container.py-5");
+  const lessonId = "class6-lesson5"; // 🔴 change per lesson
+  let maxProgress = parseInt(localStorage.getItem(lessonId)) || 0;
 
-    window.addEventListener("scroll", function() {
-        const totalHeight = content.scrollHeight - window.innerHeight;
-        const scrollPosition = window.scrollY - content.offsetTop + 100;
-        let progressPercent = (scrollPosition / totalHeight) * 100;
-        progressPercent = Math.min(Math.max(progressPercent, 0), 100);
-        progressBar.style.width = progressPercent + "%";
-    });
-});
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (docHeight <= 0) return;
+
+    let currentProgress = Math.round((scrollTop / docHeight) * 100);
+    currentProgress = Math.min(currentProgress, 100);
+
+    // 🔒 Lock progress (never decrease)
+    if (currentProgress > maxProgress) {
+      maxProgress = currentProgress;
+      localStorage.setItem(lessonId, maxProgress);
+    }
+
+    // Update UI
+    const bar = document.getElementById("lessonProgressBar");
+    const text = document.getElementById("lessonProgressText");
+
+    if (bar && text) {
+      bar.style.width = maxProgress + "%";
+      text.innerText = maxProgress + "% completed";
+    }
+  }
+
+  window.addEventListener("scroll", updateProgress);
+  window.addEventListener("load", updateProgress);
 </script>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
