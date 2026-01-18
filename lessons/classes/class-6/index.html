@@ -92,27 +92,69 @@ const lessons = [
 
 const container = document.querySelector(".row");
 
-// Generate cards dynamically
-lessons.forEach((lesson, index) => {
-  const progress = parseInt(localStorage.getItem(lesson.id)) || 0;
-  const unlocked = localStorage.getItem(lesson.id + "_unlocked") === "true" || index === 0;
+/* ---------- RENDER LESSON CARDS ---------- */
+function renderLessons() {
+  container.innerHTML = "";
 
-  const card = document.createElement("div");
-  card.className = "col-md-4";
-  card.innerHTML = `
-    <div class="card card-hover card-ready position-relative h-100 ${index%5===0?'card-bg-1':index%5===1?'card-bg-2':index%5===2?'card-bg-3':index%5===3?'card-bg-4':'card-bg-5'}">
-      <div class="card-body text-center">
-        <h2 class="card-title">${lesson.title}</h2>
-        <p class="card-text">${lesson.desc}</p>
-        <p class="mb-1">Progress: <span id="progress-${lesson.id}">${progress}%</span></p>
-        <div class="progress mb-3" style="height:8px;">
-          <div class="progress-bar" id="bar-${lesson.id}" style="width:${progress}%"></div>
+  lessons.forEach((lesson, index) => {
+    const progress = parseInt(localStorage.getItem(lesson.id)) || 0;
+
+    // Lesson unlock logic
+    const unlocked =
+      index === 0 ||
+      localStorage.getItem(lessons[index - 1].id + "_completed") === "true";
+
+    if (progress >= 90) {
+      localStorage.setItem(lesson.id + "_completed", "true");
+      if (lessons[index + 1]) {
+        localStorage.setItem(lessons[index + 1].id + "_unlocked", "true");
+      }
+    }
+
+    const card = document.createElement("div");
+    card.className = "col-md-4";
+    card.innerHTML = `
+      <div class="card card-hover card-ready position-relative h-100 card-bg-${(index%5)+1}">
+        <div class="card-body text-center">
+          <h2 class="card-title">${lesson.title}</h2>
+          <p class="card-text">${lesson.desc}</p>
+
+          <p class="mb-1">
+            Progress: <strong>${progress}%</strong>
+          </p>
+
+          <div class="progress mb-3" style="height:8px;">
+            <div class="progress-bar ${progress>=90?'bg-success':''}"
+                 style="width:${progress}%">
+            </div>
+          </div>
+
+          <a href="${unlocked ? lesson.url : '#'}"
+             class="btn ${unlocked ? (progress>=90?'btn-success':'btn-primary') : 'btn-secondary disabled'} btn-sm">
+             ${progress>=90 ? 'Completed ✔' : unlocked ? 'Continue' : 'Locked 🔒'}
+          </a>
         </div>
-        <a href="${unlocked?lesson.url:'#'}" class="btn ${unlocked?'btn-primary':'btn-secondary disabled'} btn-sm" data-lesson="${lesson.id}">${progress>=90?'Completed ✔':'Continue'}</a>
       </div>
-    </div>
-  `;
-  container.appendChild(card);
+    `;
+    container.appendChild(card);
+  });
+}
+
+/* ---------- INITIAL LOAD ---------- */
+renderLessons();
+
+/* ---------- LIVE UPDATE (NO REFRESH) ---------- */
+
+// Fires when localStorage changes (another tab / page)
+window.addEventListener("storage", () => {
+  renderLessons();
+});
+
+// Fires when user returns from lesson page
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) {
+    renderLessons();
+  }
 });
 </script>
 </body>
