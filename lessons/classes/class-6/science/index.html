@@ -177,7 +177,7 @@ chapters.forEach(chapter => {
   col.className = "col-md-4";
 
   col.innerHTML = `
-    <div class="card card-hover card-bg position-relative h-100 card-bg-${(index%7)+1}">
+    <div class="card card-hover card-bg position-relative h-100 card-bg-2">
       ${chapter.status === "ready" ? `<span class="badge bg-success badge-ready">Ready</span>` : ""}
       <div class="card-body text-center">
         <h4>Chapter ${chapter.chapterNo}</h4>
