@@ -45,7 +45,10 @@
 /* ============================
    1️⃣ CHAPTER CONFIGURATION
    ============================ */
+document.addEventListener("DOMContentLoaded", function () {
 
+console.log("JS Loaded"); // DEBUG
+  
 const chapters = [
   {
     id: "science-class6-ch1",
@@ -198,6 +201,7 @@ chapters.forEach(chapter => {
   `;
 
   container.appendChild(col);
+});
 });
 </script>
 
