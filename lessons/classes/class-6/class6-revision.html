@@ -21,6 +21,23 @@
 <link rel="stylesheet" href="../../../assets/css/style.css">
 
 <style>
+.card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.progress-container {
+    position: sticky;
+    top: 52px; /* height of navbar */
+    z-index: 1020;
+    background: #fff;
+    padding: 5px 0;
+}
+.progress {
+    height: 8px;
+}
+.progress-bar {
+    transition: width 0.2s ease;
+}
 .mcq-card {
     margin-bottom: 20px;
 }
@@ -53,6 +70,15 @@
   </div>
 </nav>
 
+<!-- ================= PROGRESS BAR (STICKY) ================= -->
+<div class="progress-container">
+    <div class="progress mb-3" style="height:8px;">
+        <div id="lessonProgressBar" class="progress-bar" role="progressbar" style="width:0%"></div>
+    </div>    
+    <p id="lessonProgressText" class="small text-muted">0% completed</p>
+</div>
+
+    
 <!-- ================= CONTENT ================= -->
 <div class="container py-5 mt-5">
 
